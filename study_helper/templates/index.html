@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مساعد الطالب الذكي</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>مؤقت التركيز</h1>
+        <div id="timer" style="font-size: 40px; font-weight: bold; margin: 10px;">25:00</div>
+        <button onclick="startTimer()">ابدأ المذاكرة</button>
+        <button onclick="resetTimer()">إعادة</button>
+
+        <hr>
+
+        <h2>مهامي الدراسية</h2>
+        <form action="/add" method="POST">
+            <input type="text" name="task" placeholder="أضف مهمة جديدة..." required>
+            <button type="submit">إضافة</button>
+        </form>
+
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        let timeLeft = 1500;
+        let timerId;
+        function startTimer() {
+            clearInterval(timerId);
+            timerId = setInterval(() => {
+                timeLeft--;
+                let mins = Math.floor(timeLeft / 60);
+                let secs = timeLeft % 60;
+                document.getElementById('timer').innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+                if (timeLeft <= 0) { clearInterval(timerId); alert("انتهى وقت التركيز، خذ استراحة!"); }
+            }, 1000);
+        }
+        function resetTimer() {
+            clearInterval(timerId);
+            timeLeft = 1500;
+            document.getElementById('timer').innerText = "25:00";
+        }
+    </script>
+</body>
+</html>
+

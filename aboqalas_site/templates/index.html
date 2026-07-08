@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>شركة أبو قلص للغازات</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #f4f7f6; text-align: center; padding: 20px; }
+        .header { background: #0056b3; color: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; }
+        .services { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .card { background: white; padding: 20px; border-radius: 10px; width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h2 { color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>شركة أبو قلص للغازات الطبية والصناعية</h1>
+        <p>الجودة والأمان في كل أسطوانة.</p>
+    </div>
+
+    <h2>خدماتنا</h2>
+    <div class="services">
+        <div class="card">
+            <h3>الغازات الطبية</h3>
+            <p>أكسجين طبي وأكسيد نيتروز بأعلى المعايير.</p>
+        </div>
+        <div class="card">
+            <h3>الغازات الصناعية</h3>
+            <p>نيتروجين، أرجون، وثاني أكسيد كربون للمصانع.</p>
+        </div>
+    </div>
+
+    <hr>
+    <h2>تواصل معنا</h2>
+    <form action="/send" method="POST" style="margin-bottom: 50px;">
+        <input type="text" name="name" placeholder="الاسم" required style="padding: 10px; margin: 5px;">
+        <br>
+        <input type="text" name="phone" placeholder="رقم الهاتف" required style="padding: 10px; margin: 5px;">
+        <br>
+        <button type="submit" style="padding: 10px 20px; background: #0056b3; color: white; border: none; border-radius: 5px;">إرسال الطلب</button>
+    </form>
+</body>
+</html>
+

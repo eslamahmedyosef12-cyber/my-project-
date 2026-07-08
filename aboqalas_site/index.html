@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>سجل الطلبات</h1>
+    <table>
+        <tr><th>الاسم</th><th>الهاتف</th></tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.split(' | ')[0].split(': ')[1] }}</td>
+            <td>{{ order.split(' | ')[1].split(': ')[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <a href="/logout" style="color: red;">تسجيل الخروج</a>
+</div>
+
