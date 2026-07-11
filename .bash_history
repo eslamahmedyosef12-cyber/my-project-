@@ -63,3 +63,59 @@ echo ""
 echo "==== 5. مساحة التخزين ===="
 pkg update && pkg upgrade
 flutter doctor
+nano index.html
+python app.py
+nano.app.py
+nano app.py
+(cd ~/yffv)
+mkdir static
+body {
+}
+h1 { color: #00ffcc; }
+.btn {
+}
+nano static/style.css
+nano templates/index.html
+python app.py
+nano templates/index.html
+nano static/style.css
+python app.py
+nano templates/index.html
+python app.py
+nano templates/index.html
+python app.py
+nano templates/index.html
+python app.py
+nano templates/index.html
+cd ~/yffv
+mkdir -p static
+nano static/style.css
+python app.py
+nano app.py
+nano templates/index.html
+body {
+}
+.profile-card {
+}
+h1 { color: #58a6ff; }
+.btn {
+}
+.btn:hover { background: #2ea043; transform: scale(1.02); }
+.whatsapp { background: #25d366; }
+nano static/style.css
+python app.py
+ls -l static/style.css
+python app.py
+nano templates/index.html
+nano static/style.css
+python app.py
+pip install flask flask-sqlalchemy flask-login
+nano app.py
+cd ~/yffv
+nano templates/login.html
+python
+nano index.html
+npx http-server -p 8080
+pkg install python -y
+cd ~/sitespark
+python -m http.server 8080
